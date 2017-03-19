@@ -1,20 +1,30 @@
 import { Doughnut } from 'vue-chartjs'
 
 export default Doughnut.extend({
+  props: ['minutesFairlyActive', 'minutesVeryActive'],
   mounted () {
-    this.renderChart({
-      labels: ['VueJs', 'EmberJs', 'ReactJs', 'AngularJs'],
-      datasets: [
-        {
-          backgroundColor: [
-            '#41B883',
-            '#E46651',
-            '#00D8FF',
-            '#DD1B16'
-          ],
-          data: [40, 20, 80, 10]
-        }
-      ]
-    }, {responsive: true, maintainAspectRatio: false})
+    if (this.minutesFairlyActive !== 0 && this.minutesVeryActive !== 0) {
+      var goal = 300 - this.minutesFairlyActive - this.minutesVeryActive
+      if (goal < 0) {
+        goal = 0
+      }
+      this.renderChart({
+        labels: ['minutesFairlyActive', 'minutesVeryActive', 'goal'],
+        datasets: [
+          {
+            backgroundColor: [
+              '#41B883',
+              '#E46651',
+              '#00D8FF'
+            ],
+            data: [
+              this.minutesFairlyActive,
+              this.minutesVeryActive,
+              goal
+            ]
+          }
+        ]
+      }, {responsive: true, maintainAspectRatio: false})
+    }
   }
 })

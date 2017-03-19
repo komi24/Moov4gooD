@@ -7,7 +7,9 @@
     <div v-if="connected">
       <a href="/"><button v-on:click="disconnect">Se déconnecter</button></a>
 
-      <MainDoughnut></MainDoughnut>
+      <div v-if="minutesFairlyActive !== 0 && minutesVeryActive !== 0">
+        <MainDoughnut v-bind:minutesFairlyActive="minutesFairlyActive" v-bind:minutesVeryActive="minutesVeryActive"></MainDoughnut>
+      </div>
 
       <p><strong>{{ minutesFairlyActive }} min + 2x{{ minutesVeryActive }} min = {{ score }} min / objectif de 300 min</strong></p>
       
