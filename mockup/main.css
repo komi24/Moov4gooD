@@ -53,4 +53,10 @@ ul.navbar-stats img {
 }
 
 
+.table-icon {
+	height: 30px;
+}
 
+.table.align-middle td {
+	vertical-align: middle;
+}
