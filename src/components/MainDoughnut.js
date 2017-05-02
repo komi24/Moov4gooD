@@ -3,7 +3,7 @@ import { Doughnut } from 'vue-chartjs'
 export default Doughnut.extend({
   props: ['minutesFairlyActive', 'minutesVeryActive'],
   mounted () {
-    if (this.minutesFairlyActive !== 0 && this.minutesVeryActive !== 0) {
+    if (this.minutesFairlyActive !== undefined && this.minutesVeryActive !== undefined) {
       var goal = 300 - this.minutesFairlyActive - this.minutesVeryActive
       if (goal < 0) {
         goal = 0

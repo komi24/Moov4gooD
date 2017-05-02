@@ -1,0 +1,56 @@
+body {
+	background: rgb(235,235,235);
+}
+
+.navbar {
+	box-shadow: 0 3px 5px rgba(0,0,0,0.05);
+}
+
+ul.navbar-stats {
+	list-style-type: none;
+	white-space: nowrap;
+	margin: 0;
+	color: white;
+}
+
+ul.navbar-stats li {
+	display:inline;
+	margin-left: 20px;
+}
+
+ul.navbar-stats img {
+	height: 30px;
+	background: white;
+	border-radius: 8px;
+	padding: 5px;
+	margin-left: 2px;
+}
+
+.row .col-item {
+	background: white;
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 0 25px rgba(0,0,0,0.04);
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.row .col-item h2 {
+	font-family: "Segoe UI Light";
+	font-size: 1.5rem;
+}
+
+.row .col-item table {
+	margin-top: 20px;
+}
+
+.row .col-item table .thead-inverse th {
+	background-color: #0275d8;
+}
+
+.row .col-item table.text-center thead th {
+	text-align: center!important;
+}
+
+
+

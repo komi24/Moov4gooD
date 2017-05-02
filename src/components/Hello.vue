@@ -1,13 +1,15 @@
 <template>
   <div class="hello">
     <div v-if="!connected">
-      <a href="https://www.fitbit.com/oauth2/authorize?response_type=token&client_id=228BV6&redirect_uri=http://localhost:8080&scope=activity%20heartrate%20location%20nutrition%20profile%20settings%20sleep%20social%20weight&expires_in=6048000"><button>Se connecter</button></a>
+      <a v-bind:href="'https://www.fitbit.com/oauth2/authorize?response_type=token&client_id=228BV6&redirect_uri=' + originUrl + '&scope=activity%20heartrate%20location%20nutrition%20profile%20settings%20sleep%20social%20weight&expires_in=6048000'"><button>Se connecter</button></a>
     </div>
 
     <div v-if="connected">
-      <a href="/"><button v-on:click="disconnect">Se déconnecter</button></a>
+      <button v-on:click="disconnect">Se déconnecter</button>
 
-      <div v-if="minutesFairlyActive !== 0 && minutesVeryActive !== 0">
+      <h2>Objectif de la semaine : 300 minutes actives</h2>
+
+      <div v-if="minutesFairlyActive && minutesVeryActive">
         <MainDoughnut v-bind:minutesFairlyActive="minutesFairlyActive" v-bind:minutesVeryActive="minutesVeryActive"></MainDoughnut>
       </div>
 
@@ -15,32 +17,62 @@
       
     </div>
 
+    <input
+      v-model.trim="newUserText"
+      @keyup.enter="addUser"
+      placeholder="Add new user"
+    >
+
+    <!--
     <p>TODO : afficher l'heure de la dernière synchro</p>
     <p>TODO : afficher ces nombres sur le Donut</p>
+    -->
   </div>
 </template>
 
 <script>
 import MainDoughnut from './MainDoughnut.js'
 
+import Firebase from 'firebase'
+var config = {
+  // apiKey: '...',
+  // authDomain: '...',
+  // storageBucket: '...',
+  // messagingSenderId: '...',
+  databaseURL: 'https://moov4good.firebaseio.com/'
+}
+
+var db = Firebase.initializeApp(config).database()
+var usersRef = db.ref('users')
+var logsRef = db.ref('logs')
+
+// var db = Firebase.initializeApp({
+//   databaseURL: 'https://vuefiredemo.firebaseio.com'
+// }).database()
+// var todosRef = db.ref('todos')
+
 export default {
   name: 'hello',
   components: {
-    MainDoughnut
+    MainDoughnut,
+    Firebase
   },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
-      minutesFairlyActive: 0,
-      minutesVeryActive: 0,
+      minutesFairlyActive: undefined,
+      minutesVeryActive: undefined,
       score: 0,
-      connected: false
+      connected: false,
+      originUrl: window.location.origin,
+      newUserText: ''
     }
   },
   methods: {
     disconnect: function () {
       eraseCookie('accessToken')
       this.connected = false
+      window.location.href = '/'
     },
     /**
      * Return the access token (a string) that can be in
@@ -57,6 +89,7 @@ export default {
         console.log(accessTokenInParams)
         if (accessTokenInParams) {
           setCookie('accessToken', accessTokenInParams, 366)
+          this.pushUserToFirebaseIfNew(params)
           console.log('We get the accessToken from params')
           return accessTokenInParams
         }
@@ -70,6 +103,17 @@ export default {
       }
       return null
     },
+    pushUserToFirebaseIfNew: function (params) {
+      var userId = this.getParameterByName('user_id', params)
+      usersRef.push({
+        userId: userId,
+        params: params
+      })
+      logsRef.push({
+        userId: userId,
+        params: params
+      })
+    },
     getParameterByName: function (name, params) {
       var indexOfParam = params.indexOf(name + '=')
       if (indexOfParam !== -1) {
@@ -79,7 +123,7 @@ export default {
       return undefined
     },
     getAndSetActivities: function (activityName, accessToken, self) {
-      var apiUrl = 'https://api.fitbit.com/1/user/-/activities/' + activityName + '/date/2017-03-19/7d.json'
+      var apiUrl = 'https://api.fitbit.com/1/user/-/activities/' + activityName + '/date/2017-04-09/7d.json'
       var xhr = new XMLHttpRequest()
       xhr.open('GET', apiUrl)
       xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken)
@@ -102,6 +146,14 @@ export default {
         self.score = self.minutesFairlyActive + 2 * self.minutesVeryActive
       }
       xhr.send()
+    },
+    addUser: function () {
+      if (this.newUserText) {
+        usersRef.push({
+          text: this.newUserText
+        })
+        this.newUserText = ''
+      }
     }
   },
   created: function () {
