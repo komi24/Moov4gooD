@@ -7,6 +7,8 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -25,6 +27,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="store.html">Magasins des dons</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="events.html">Évènements sportifs</a>
           </li>
         </ul>
       </div>
@@ -50,13 +55,13 @@
     <div class="row">
       <div class="col-md-8">
         <div class="col-item">
-          <h2>Objectifs pas</h2>
+          <h2>Objectifs pas de la semaine</h2>
           <canvas id="myChart"  height="100"></canvas>
           <div class="text-center">
             <p class="lead"><strong>53 588</strong> pas cette semaine</p>
           </div>
 
-          <table class="table table-hover">
+          <table class="table table-hover table-font-sm">
             <thead class="thead-inverse">
               <tr>
                 <th>Niveau</th>
@@ -66,27 +71,27 @@
             </thead>
             <tbody>
               <tr class="table-success">
-                <td>Niveau 1</td>
+                <td>Niveau 1 - Petit Marcheur</td>
                 <td>50 000 pas</td>
                 <td>25 ❤️</td>
               </tr>
               <tr>
-                <td>Niveau 2</td>
+                <td>Niveau 2 - Grand Marcheur</td>
                 <td>70 000 pas</td>
                 <td>10 ❤️</td>
               </tr>
               <tr>
-                <td>Niveau 3</td>
+                <td>Niveau 3 - Marcheur d'élite</td>
                 <td>85 000 pas</td>
                 <td>10 ❤️</td>
               </tr>
               <tr>
-                <td>Niveau 4</td>
+                <td>Niveau 4 - Marcheur d'elite</td>
                 <td>100 000 pas</td>
                 <td>10 ❤️</td>
               </tr>
               <tr>
-                <td>Niveau 5</td>
+                <td>Niveau 5 - Forest Gump</td>
                 <td>120 000 pas</td>
                 <td>10 ❤️</td>
               </tr>
@@ -96,10 +101,10 @@
         <div class="col-item">
           <h2>Exploits</h2>
 
-          <table class="table table-hover">
+          <table class="table table-hover table-font-sm">
             <thead class="thead-inverse">
               <tr>
-                <th>Exploit</th>
+                <th>Exploit individuel</th>
                 <th>Description</th>
                 <th>Récompense</th>
                 <th>Nb de réussites</th>
@@ -109,32 +114,63 @@
               <tr>
                 <th>Tour de France</th>
                 <td>Faire 5h de vélo dans la semaine</td>
-                <td>25 ❤️</td>
+                <td>15 ❤️</td>
                 <td>2</td>
               </tr>
               <tr>
-                <th>Lorem ipsum</th>
-                <td>Doler sit amet</td>
+                <th>Course mythique</th>
+                <td>Réaliser une des courses identifiées en France</td>
                 <td>10 ❤️</td>
+                <td>2/10</td>
+              </tr>
+              <tr>
+                <th>Semi-marathon</th>
+                <td>Courir 21km</td>
+                <td>21 ❤️</td>
                 <td>2</td>
               </tr>
               <tr>
-                <th>Lorem ipsum</th>
-                <td>Doler sit amet</td>
-                <td>10 ❤️</td>
+                <th>Marathon</th>
+                <td>Courir 42km</td>
+                <td>42 ❤️</td>
+                <td>2</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="table table-hover table-font-sm">
+            <thead class="thead-inverse">
+              <tr>
+                <th>Exploit collectif</th>
+                <th>Description</th>
+                <th>Récompense</th>
+                <th>Nb de réussites</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Match de foot</th>
+                <td>Un bon match de foot avec ses collègues</td>
+                <td>5 ❤️</td>
                 <td>2</td>
               </tr>
               <tr>
-                <th>Lorem ipsum</th>
-                <td>Doler sit amet</td>
-                <td>10 ❤️</td>
-                <td>2</td>
+                <th>Match de basket</th>
+                <td>Un match de basket niveau NBA avec ses collègues</td>
+                <td>5 ❤️</td>
+                <td>5</td>
               </tr>
               <tr>
-                <th>Lorem ipsum</th>
-                <td>Doler sit amet</td>
-                <td>10 ❤️</td>
-                <td>2</td>
+                <th>Footing groupé</th>
+                <td>Une course en meute avec ses collègues</td>
+                <td>6 ❤️</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <th>Partie de pétanque</th>
+                <td>Une partie de pétanque avec ses collègues (avec ou sans pastis)</td>
+                <td>2 ❤️</td>
+                <td>0</td>
               </tr>
             </tbody>
           </table>
@@ -147,7 +183,7 @@
         </div>
         <div class="col-item">
           <h2>Historique</h2>
-          <table class="table table-hover table-sm text-center">
+          <table class="table table-hover table-font-sm table-sm text-center">
             <thead class="thead-inverse">
               <tr>
                 <th>Semaine</th>
@@ -180,7 +216,7 @@
         </div>
         <div class="col-item">
           <h2>Derniers exploits</h2>
-            <table class="table table-hover table-sm text-center">
+            <table class="table table-hover table-font-sm table-sm text-center">
               <thead class="thead-inverse">
                 <tr>
                   <th>Exploit</th>
@@ -192,17 +228,17 @@
                 <tr>
                   <td>Tour de France</td>
                   <td>28 avr</td>
-                  <td>25 ❤️</td>
+                  <td>15 ❤️</td>
                 </tr>
                 <tr>
                   <td>Tour de France</td>
                   <td>24 avr</td>
-                  <td>25 ❤️</td>
+                  <td>15 ❤️</td>
                 </tr>
                 <tr>
-                  <td>Lorem ipsum</td>
+                  <td>Course mythique</td>
                   <td>19 avr</td>
-                  <td>9 ❤️</td>
+                  <td>10 ❤️</td>
                 </tr>
               </tbody>
             </table>
@@ -221,6 +257,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js"></script>
 
   <script>
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
   var ctx = document.getElementById("myChart");
   var myChart = new Chart(ctx, {
       type: 'bar',

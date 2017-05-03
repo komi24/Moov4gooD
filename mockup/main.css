@@ -52,6 +52,10 @@ ul.navbar-stats img {
 	text-align: center!important;
 }
 
+.row .col-item h2 {
+	margin-bottom: 1rem;
+}
+
 
 .table-icon {
 	height: 30px;
@@ -60,3 +64,14 @@ ul.navbar-stats img {
 .table.align-middle td {
 	vertical-align: middle;
 }
+
+.table-font-sm td, .table-font-sm th {
+	font-size: 14px;
+}
+
+
+.card {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
