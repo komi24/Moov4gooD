@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <header class="navbar navbar-toggleable-md bg-faded navbar-inverse bg-primary sticky-top">
+    <nav class="container">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Move4Good</a>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="store.html">Magasins des dons</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="events.html">Évènements sportifs</a>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="navbar-stats">
+        <li>
+          7
+          <img src="img/round-flame.png">
+        </li>
+        <li>
+          420
+          <img src="img/heart.png">
+        </li>
+        <li>
+          1024
+          <img src="img/blue-heart.png">
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <!--
+        <div class="col-item">
+          <h2>Organiser un évènement sportif</h2>
+          <div class="form-group row">
+            <label for="example-text-input" class="col-3 col-form-label">Nom de l'évènement</label>
+            <div class="col-9">
+              <input class="form-control" type="text" id="example-text-input">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="example-text-input" class="col-3 col-form-label">Sport</label>
+            <div class="col-9">
+              <input class="form-control" type="text" id="example-text-input">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="example-date-input" class="col-3 col-form-label">Dates</label>
+            <div class="col-4">
+              <input class="form-control"  type="datetime-local" value="2015-06-19T14:00:00" id="example-date-input">
+            </div>
+            <label for="example-date-input" class="col-1 col-form-label">au</label>
+            <div class="col-4">
+              <input class="form-control"  type="datetime-local" value="2015-06-19T16:00:00" id="example-date-input">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="example-text-input-2" class="col-3 col-form-label">Adresse</label>
+            <div class="col-9">
+              <input class="form-control" type="text" id="example-text-input-2">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="example-text-input" class="col-3 col-form-label">Détail</label>
+            <div class="col-9">
+              <textarea  class="form-control"></textarea>
+            </div>
+          </div>
+          <div class="pull-right clearfix">
+            <a href="#" class="btn btn-primary">Créer l'évènement</a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        -->
+
+        <div class="col-item">
+          <div class="pull-right clearfix">
+            <a href="#" class="btn btn-sm btn-primary">Créer un évènement</a>
+          </div>
+          <h2>Évènements sportifs à venir</h2>
+          <div class="card">
+            <div class="card-block">
+              <div class="row">
+                <div class="col-lg-2 col-md-3 col-sm-4 text-center vcenter">
+                  <small>SAMEDI</small><br>
+                  <big>17 JUIN</big><br>
+                  <small>14h00 - 18h00</small>
+                </div>
+                <div class="col-lg-10 col-md-9 col-sm-8">
+                  <div class="pull-right">3 ❤️</div>
+                  <h4 class="card-title">Tournoi de foot</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. </p>
+                </div>
+              </div>
+              <div class="pull-right">
+                <a href="#" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" data-html="true" title="@maxence<br>@pirouette<br>@lucas<br>@timmy<br>@jordan"><span class="fa fa-check"></span> Je participe (5)</a>
+                <a href="#" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" data-html="true" title="@bob"><span class="fa fa-times"></span> Je ne viendrai pas (1)</a>
+              </div>
+            </div>
+            <div class="card-footer text-muted small">
+              Foot - <a href="https://www.google.fr/maps/place/Halle+Georges+Carpentier/@48.8200132,2.3654045,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6722bc012799d:0xe9650d15c4779fa!8m2!3d48.8200132!4d2.3675932">Halle Georges Carpentier, 81 Boulevard Masséna, 75013 Paris</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-block">
+              <div class="row">
+                <div class="col-lg-2 col-md-3 col-sm-4 text-center vcenter">
+                  <small>MARDI</small><br>
+                  <big>20 JUIN</big><br>
+                  <small>18h00 - 19h30</small>
+                </div>
+                <div class="col-lg-10 col-md-9 col-sm-8">
+                  <div class="pull-right">3 ❤️</div>
+                  <h4 class="card-title">Match de Basket</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. </p>
+                </div>
+              </div>
+              <div class="pull-right">
+                <a href="#" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" data-html="true" title="@maxence<br>@pirouette"><span class="fa fa-check"></span> Je participe (2)</a>
+                <a href="#" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" data-html="true" title=""><span class="fa fa-times"></span> Je ne viendrai pas (0)</a>
+              </div>
+            </div>
+            <div class="card-footer text-muted small">
+              Basket - <a href="https://www.google.fr/maps/place/Halle+Georges+Carpentier/@48.8200132,2.3654045,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6722bc012799d:0xe9650d15c4779fa!8m2!3d48.8200132!4d2.3675932">Stade Bouret, 42 rue du Test, 75002 Paris</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-4">
+        <div class="col-item">
+          <h2>Fitbit</h2>
+          <p>Dernière synchronisation il y a 18 min.</p>
+        </div>
+        <div class="col-item">
+          <h2>Historique</h2>
+          <table class="table table-hover table-sm text-center">
+            <thead class="thead-inverse">
+              <tr>
+                <th>Semaine</th>
+                <th>Récompense</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1 mai - 7 mai</td>
+                <td>105 ❤️</td>
+              </tr>
+              <tr>
+                <td>24 avr - 30 avr</td>
+                <td>100 ❤️</td>
+              </tr>
+              <tr>
+                <td>17 avr - 23 avr</td>
+                <td>110 ❤️</td>
+              </tr>
+              <tr>
+                <td>10 avr - 16 avr</td>
+                <td>170 ❤️</td>
+              </tr>
+              <tr>
+                <td>3 avr - 9 avr</td>
+                <td>95 ❤️</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-item">
+          <h2>Derniers exploits</h2>
+            <table class="table table-hover table-sm text-center">
+              <thead class="thead-inverse">
+                <tr>
+                  <th>Exploit</th>
+                  <th>Date</th>
+                  <th>Récompense</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Tour de France</td>
+                  <td>28 avr</td>
+                  <td>25 ❤️</td>
+                </tr>
+                <tr>
+                  <td>Tour de France</td>
+                  <td>24 avr</td>
+                  <td>25 ❤️</td>
+                </tr>
+                <tr>
+                  <td>Lorem ipsum</td>
+                  <td>19 avr</td>
+                  <td>9 ❤️</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery first, then Tether, then Bootstrap JS. -->
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js"></script>
+
+  <script>
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  var ctx = document.getElementById("myChart");
+  var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"],
+          datasets: [{
+              label: '# de pas',
+              data: [8512, 10519, 11001, 12065, 9190, 2301, 0],
+              backgroundColor: [
+                  'rgba(255,99,132,0.8)',
+                  'rgba(54, 162, 235, 0.8)',
+                  'rgba(255, 206, 86, 0.8)',
+                  'rgba(75, 192, 192, 0.8)',
+                  'rgba(153, 102, 255, 0.8)',
+                  'rgba(255, 159, 64, 0.8)',
+                  'rgba(255,99,33,0.8)'
+              ],
+              borderColor: [
+                  'rgba(255,99,132,1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255, 1)',
+                  'rgba(255, 159, 64, 1)',
+                  'rgba(255,99,33,1)'
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+          scales: {
+              yAxes: [{
+                  ticks: {
+                      beginAtZero:true
+                  }
+              }]
+          }
+      }
+  });
+  </script>
+</body>
+</html>
